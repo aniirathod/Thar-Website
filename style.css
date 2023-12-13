@@ -1,0 +1,613 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
+  );
+
+  scroll-behavior: smooth;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+/* NAV BAR */
+#nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 9vw;
+  height: 9vh;
+  width: 100%;
+  z-index: 99;
+  color: #fff;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
+  );
+  border-bottom: 2px solid #fec000;
+  border-radius: 2vw;
+  scroll-behavior: smooth;
+}
+#nav #lnav {
+  height: 100%;
+  width: 18%;
+  display: flex;
+  align-items: center;
+}
+#nav h2 {
+  font-size: 2.2vw;
+  margin: 0 10px;
+}
+#nav h2 span {
+  color: #fec000;
+}
+#Rnav {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 78%;
+}
+#links {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  height: 100%;
+  width: 60%;
+  margin-left: 0;
+}
+#Rnav #links a {
+  position: relative;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1vw;
+  font-weight: 500;
+}
+#Rnav #links a::after {
+  content: "";
+  position: absolute;
+  top: 1.1vw;
+  height: 0.1vw;
+  left: -0.1vw;
+  width: 0;
+  opacity: 0;
+  background-color: #fec000;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#Rnav #links a:hover::after {
+  width: 110%;
+  opacity: 1;
+}
+#Rnav #links a:hover {
+  color: #fec000;
+}
+#socials {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin-left: 6vw;
+  height: 100%;
+  width: 40%;
+}
+
+#socials i {
+  color: #fec000;
+  font-size: 1.3vw;
+}
+
+#socials .ri-mail-fill span {
+  color: #fff;
+}
+#socials .ri-mail-fill {
+  font-size: 1.2vw;
+}
+
+/* Page1 CSS Editing Start here*/
+
+#hero {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 100%;
+  width: 90%;
+  color: #fff;
+}
+
+#hero #Lhero {
+  width: 50%;
+  padding: 14vw 0 0 6vw;
+}
+#hero #Lhero h3 {
+  line-height: 3.25vw;
+  font-size: 2.25vw;
+  word-spacing: 2px;
+}
+#Lhero h3 span {
+  color: #fec000;
+}
+#hero #Lhero p {
+  max-width: 25vw;
+  margin-top: 30px;
+  font-size: 1.1vw;
+  font-weight: lighter;
+  line-height: 1.5vw;
+  text-align: justify;
+}
+#hero #Rhero {
+  padding: 14vw 1vw 0 0;
+}
+#hero #Rhero img {
+  width: 100%;
+  object-fit: cover;
+}
+button {
+  font-size: 1.1vw;
+  position: relative;
+  margin-top: 2vw;
+  height: 2.25vw;
+  width: 8vw;
+  color: #fec000;
+  border-radius: 15%;
+  border: 2px solid #fec000;
+  background: none;
+  cursor: pointer;
+}
+button a {
+  text-decoration: none;
+  color: #fec000;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  border-radius: 9%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 00%;
+  width: 00%;
+  background-color: black;
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+}
+button:hover {
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  scale: 1.05;
+  color: #000000;
+
+  border-color: #fec000;
+}
+button:hover a {
+  color: #000000;
+}
+
+button:hover::before {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  background-color: #fec000;
+}
+
+/* Page2 CSS Editing Start here*/
+
+#page2 {
+  position: relative;
+  height: 70%;
+  width: 100%;
+  margin-bottom: 10vw;
+  overflow: hidden;
+}
+#page2 h3 {
+  position: absolute;
+  top: 0;
+  left: 44%;
+  color: #fec000;
+  font-size: 2.5vw;
+}
+
+#page2 #container {
+  display: grid;
+  grid-template-rows: 25vw;
+  grid-template-columns: 23vw 23vw 23vw 25vw 23vw 23vw;
+  margin-top: 150px;
+  height: 80%;
+  width: 100%;
+  transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+#page2 #container #item {
+  position: relative;
+  margin: 0 0 0 5vw;
+  height: 20vw;
+  width: 20vw;
+}
+#container #item img {
+  -webkit-box-shadow: 10px 3px 36px -8px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 10px 3px 36px -8px rgba(0, 0, 0, 0.67);
+  box-shadow: 10px 3px 36px -8px rgba(2, 2, 2, 0.67);
+  background-color: #ffffff;
+  border-radius: 10%;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+#item h2 {
+  position: absolute;
+  top: 5px;
+  left: 55px;
+  color: #000000;
+}
+#item p {
+  color: #000000;
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  font-size: 1.3vw;
+}
+#item #pricebtn {
+  position: absolute;
+  color: #000000;
+  border: 2px solid #000000;
+  width: 8vw;
+  height: 1.5vw;
+  bottom: 10px;
+  left: 30px;
+  cursor: pointer;
+}
+
+#page2 #icon i {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin-left: 1vw;
+  font-size: 3vw;
+  color: #fec000;
+  cursor: pointer;
+  top: 10vw;
+  z-index: 99;
+  height: 20vw;
+}
+#page2 #icon .ri-arrow-right-line {
+  position: absolute;
+  top: 10vw;
+  right: 1vw;
+  margin-left: 2vw;
+  font-size: 3vw;
+  color: #ffc800;
+  cursor: pointer;
+}
+
+/* Page3 CSS Editing Start here*/
+
+#page3 {
+  height: calc(80% - 9vh);
+  width: 100%;
+  scroll-margin-top: 8vw;
+  margin-bottom: 4vw;
+}
+#page3 header {
+  height: 3vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#page3 h2 {
+  color: #fec000;
+  font-size: 2.5vw;
+}
+#page3 #main3 {
+  height: calc(100% - 3vw);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#page3 #L3 {
+  height: 50vh;
+  width: 30%;
+  margin: 3vw 10vw;
+  display: flex;
+  justify-content: space-between;
+}
+#page3 #L3 i {
+  color: #fec000;
+  font-size: 3.5vw;
+  display: flex;
+  z-index: 55;
+  align-items: center;
+  cursor: pointer;
+}
+#page3 #L3 #car {
+  height: 100%;
+  width: 70%;
+  display: flex;
+
+  overflow: hidden;
+}
+#page3 #L3 #car img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transition: all 1s ease-in-out;
+  margin-left: 20px;
+}
+#page3 #R3 {
+  height: 60vh;
+  width: 47%;
+}
+
+#page3 #R3 #carInfo {
+  height: 50vh;
+  width: 80%;
+  margin: 3vw 0;
+  overflow: hidden;
+}
+#page3 #R3 #carInfo .info {
+  margin-bottom: 3.5vw;
+  transition: all 1s ease-in-out;
+  color: #fff;
+}
+
+#page3 #R3 #carInfo .info h2 {
+  color: #fff;
+}
+.info h2 span {
+  color: #fec000;
+}
+.info h5 {
+  font-weight: lighter;
+}
+#page3 #R3 #carInfo p {
+  word-spacing: 1vh;
+  font-size: 1vw;
+  font-weight: 100;
+  line-height: 1.2vw;
+}
+#page3 #R3 #carInfo #ratings {
+  display: flex;
+}
+#ratings #Lrate {
+  width: 30%;
+}
+#ratings #Rrate {
+  width: 80%;
+}
+#ratings #Rrate .starline {
+  margin-bottom: 0.3vw;
+  color: #fec000;
+}
+
+#page3 #R3 #carInfo .rating {
+  display: flex;
+  line-height: 1.4vw;
+  gap: 8vw;
+}
+
+/* Page4 CSS Editing Start here*/
+
+#page4 {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  height: calc(100% - 9vh);
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+
+  margin-bottom: 8vw;
+  padding-top: 4.4vw;
+}
+#page4 #about {
+  width: 30%;
+}
+#page4 #about p span {
+  color: #fec000;
+}
+#page4 p {
+  text-align: justify;
+  font-size: 1.1vw;
+  line-height: 1.3vw;
+  margin-top: 2vw;
+}
+#page4 h2 {
+  color: #fec000;
+  font-size: 2.3vw;
+}
+#page4 #core {
+  width: 30%;
+}
+
+#page4 #teamtext {
+  position: absolute;
+  top: 25vw;
+  height: 45vh;
+  width: 100%;
+}
+#page4 #team {
+  display: flex;
+  margin: 0 18vw;
+}
+#page4 #team .image {
+  position: relative;
+  height: 15vw;
+  width: 10vw;
+  margin: 5px;
+  background-color: #000000;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  cursor: grab;
+}
+#page4 #team #manager {
+  object-fit: contain;
+}
+#Ctext {
+  position: absolute;
+  bottom: 0;
+  height: 0vw;
+  background-color: #0000003a;
+  width: 9.5vw;
+  transition: all 0.2s ease-in-out;
+}
+#page4 #team .image:hover #Ctext {
+  height: 9vw;
+}
+#page4 #team .image:hover {
+  transform: scale(1.03);
+}
+#page4 #team .image:hover img {
+  filter: blur(1.25px);
+}
+
+#page4 #team h3 {
+  text-transform: uppercase;
+  font-size: 1.3vw;
+}
+#page4 #team p {
+  margin-top: 1vw;
+  font-size: 12px;
+  word-spacing: 0.1vw;
+}
+
+/* Final section of the page, CSS Editing Start here*/
+
+#contact {
+  position: relative;
+  height: calc(100% - 10vw);
+  width: 100%;
+}
+#contact header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact header h2 {
+  font-size: 2.2vw;
+  color: #fec000;
+}
+#contact #lastmain {
+  height: calc(100% - 10vh);
+  width: 100%;
+  display: flex;
+}
+#lastmain #left {
+  width: 50%;
+  height: 80%;
+  border-right: 2px solid #fec000;
+}
+#lastmain #left legend {
+  height: 100%;
+  width: 50%;
+  margin: 2vw 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+#lastmain #left legend input,
+textarea {
+  outline: none;
+  border: none;
+  height: 3vw;
+  background-color: transparent;
+  border-radius: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3vw;
+  border-bottom: 1px solid #fec000;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: pointer;
+}
+textarea {
+  scrollbar-width: 2px;
+  height: 5vw;
+  resize: none;
+}
+input::placeholder {
+  color: #a3a3a3;
+}
+textarea::placeholder {
+  color: #a3a3a3;
+}
+#lastmain #left legend input:hover {
+  scale: 1.1;
+  color: #ffffff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  cursor: pointer;
+}
+input:hover::placeholder {
+  color: #fec000;
+}
+textarea:hover::placeholder {
+  color: #fec000;
+}
+textarea:hover {
+  scale: 1.1;
+  color: #000000;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#lastmain #left #submit {
+  color: #a3a3a3;
+  margin-top: 2vw;
+  width: 40%;
+  margin-left: 7vw;
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+#lastmain #left #submit:hover {
+  color: #fec000;
+  scale: 1.05;
+  border: 1px solid #fec000;
+}
+#lastmain #right {
+  width: 45%;
+  height: 80%;
+  overflow: hidden;
+}
+#lastmain #right img {
+  width: 100%;
+  object-fit: contain;
+}
+#contact #footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 10vh;
+  border-top: 2px solid #fec000;
+  border-radius: 16px;
+}
+#footer #box {
+  display: flex;
+  width: 10%;
+  height: 5vh;
+  justify-content: space-between;
+  align-items: center;
+}
+#box p {
+  color: #fec000;
+  font-size: 1.2vw;
+}
