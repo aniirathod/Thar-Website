@@ -4,7 +4,7 @@ function arrow() {
   var container = document.querySelector("#container");
 
   rightArrow.addEventListener("click", function () {
-    container.style.transform = "translatex(-750px)";
+    container.style.transform = "translatex(-752px)";
     container.style.gridTemplateColumns = "23vw 23vw 23vw 23vw 23vw 23vw";
     container.style.marginLeft = "30px";
   });
